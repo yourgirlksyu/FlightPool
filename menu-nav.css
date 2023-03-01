@@ -1,0 +1,65 @@
+/*Стили для меню при размере экрана < 720px*/
+/*.container {
+	position: relative;
+	width: 50vh;
+	height: 500px;
+	border: 1px solid red;
+}*/
+* {
+	box-sizing: border-box;
+}
+.menu-mini {
+	z-index: 30;
+	position: absolute;
+	top: 0;
+	right: 0;
+	box-sizing: border-box;
+	width: 45px;
+	height: 45px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #096A9B;
+
+}
+.menu-mini div {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+}
+.menu-mini2 {
+	display: none;
+	position: absolute;
+	width: 350px;
+	height: 80%;
+	right: 0px;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	z-index: 40;
+}
+
+.modal-container {
+	height: 100%;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.modal-container a {
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px;
+	color: #096A9B;
+}
+
+
+
+.menu-mini2:target {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}

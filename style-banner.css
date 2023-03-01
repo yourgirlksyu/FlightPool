@@ -1,0 +1,367 @@
+
+.banner {
+	width: 1200px;
+	margin: auto;
+	margin-top: 150px;
+	background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), 
+	url(../images/fon2.jpg);
+	background-size: cover;
+	border: 1px solid white;
+	padding: 30px;
+	box-sizing: border-box;
+	font-size: 25pt;
+	color: grey;
+	font-family: Arial;
+	overflow: hidden;
+	z-index: -3;
+}
+/*Анимация заголовка / подзаголовка */
+.comp-name {
+	font-size: 18px;
+	font-weight: bold;
+	color: #224f93;
+	letter-spacing: 2px;
+	opacity: 0;
+
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	justify-items: center;
+	align-items: end;
+	z-index: 10;
+}
+
+.comp-text {
+	margin-left: 10px;
+	font-size: 16px;
+	letter-spacing: 5px;
+	opacity: 0;
+}
+@keyframes text {
+	from {
+		z-index: 10;
+		opacity: 0;
+	}
+	
+	to {
+		z-index: 10;
+		opacity: 1;
+	}
+}
+
+.comp-name, .comp-text{
+	animation-name: text;
+	animation-duration: 4s;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	z-index: 1;
+}
+
+/*Анимация списка */
+.banner-features {
+	width: 100%;
+	height: 350px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.baner-features-cont {
+	position: relative;
+}
+.banner-cloud {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-image: url(../images/cloud2.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+
+
+}
+.bnr-1 {
+	top: -20px;
+	animation-name: cloudbanner;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 7s;
+	animation-timing-function: linear;
+
+}
+.bnr-2 {
+	top: 10px;
+	animation-name: cloudbanner;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 10s;
+	animation-timing-function: linear;
+}
+.bnr-3 {
+	top: -90px;
+	animation-name: cloudbanner;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 13s;
+	animation-timing-function: linear;
+}
+
+@keyframes cloudbanner {
+	from {
+		opacity: 0;
+		top: -10%;
+	}
+	20% {
+		top: 0;
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+		top: 10%;
+	}
+
+	to {
+		opacity: 0;
+		top: 30%;
+
+	}
+}
+.pr {
+	font-size: 25pt;
+	color: #224f93;
+	margin-bottom: 15px;
+	position: relative;
+	transform: translateY(20px);
+	opacity: 0;
+}
+@keyframes spisok {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(-20px);
+
+	}
+}
+.pr-1 {
+	animation-name: spisok;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 7s;
+	animation-timing-function: linear;
+}
+.pr-2 {
+	animation-name: spisok;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 10s;
+	animation-timing-function: linear;
+}
+.pr-3 {
+	animation-name: spisok;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 13s;
+	animation-timing-function: linear;
+}
+/*Анимация графиков */
+.gr {
+	width: 150px;
+	height: 70px;	
+	font-size: 15pt;
+	margin-left: 20px;
+	text-align: center;
+	overflow: hidden;
+}
+.graf {
+	width: 600px;
+	height: 200px;
+	display: flex;
+	align-items: flex-end;
+}
+.graf-p {	
+	color: green;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	opacity: 0;
+	animation-name: opacity-banner;
+	animation-duration: 2s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 13s;
+}
+
+@keyframes opacity-banner {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+@keyframes bron {
+	from {
+		background-color: yellow;
+	}
+	
+	to {
+		height: 160px;
+		background-color: green;
+		color:white;
+	}
+}
+
+@keyframes ver {
+	from {
+		background-color: yellow;
+	}
+	
+	to {
+		height: 180px;
+		background-color: green;
+		color:white;
+	}
+}
+
+@keyframes cost {
+	from {
+		background-color: yellow;
+		height: 190px;
+	}
+	
+	to {
+		height: 90px;
+		background-color: green;
+		color:white;
+	}
+}
+
+.graf-bron {
+	height: 0px;
+	animation-name: bron;
+	animation-duration: 5s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 14s;
+}
+.graf-ver  {
+	height: 0px;
+	animation-name: ver;
+	animation-duration: 5s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 20s;
+}
+.graf-cost  {
+	height: 0px;
+	animation-name: cost;
+	animation-duration: 5s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-delay: 17s;
+}
+/*Самолет*/
+.plane {
+	position: absolute;
+	width: 25%;
+	top: -20%;
+	left: -20%;
+	animation-name: fly;
+	animation-duration: 4s;
+	animation-iteration-count:1;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@keyframes fly {
+	from {
+		z-index: -1;
+		top: -20%;
+		left: -20%;
+		scale: 1;
+	}
+
+	10% {
+		top: -10%;
+		left: -10%;
+		scale: 1;
+	}
+	20% {
+		top: 5%;
+		left: 10%;
+		scale: 1;
+	}
+	40% {
+		left: 40%;
+		scale: 1;
+	}
+	50% {
+		top: 30px;
+		left: 50%;
+		scale: 1;
+	}
+	60% {
+		top: 35px;
+		scale: 0.7;
+	}
+	70% {
+		top: 25px;
+		scale: 0.7;
+	}
+	to {
+		z-index: -1;
+		top: 15px;
+		left: 65%;
+		scale: 0.7;
+	}
+}
+/*Облака*/
+.cloud {
+	position: absolute;	
+	width: 200px;
+	top: 10%;
+	animation-delay: 4s;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+
+}
+
+.cloud1 {
+	right: -20%;
+	animation-name: clouds1;
+}
+.cloud2 {
+	right: 20%;
+	animation-name: clouds2;
+}
+@keyframes clouds1 {
+	to {
+		right: 10%;
+	}
+}
+@keyframes clouds2 {
+	to {
+		right: 15%;
+	}
+}
